@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Burger</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        .h1 {
+            color: white;
+            text-shadow: 1px 1px azure;
+        }
+    </style>
+    <link rel="stylesheet" href="./selectBurger.css">
+</head>
+<body>
+    <header style="background-color: black; height: 200px;">
+        <h2 style="text-align: center;">👸</h2>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+            <h1 style="color: white; font-size: 70px;">Burger</h1>
+            <h1 style="color:deeppink; font-size: 70px;">Queen</h1>
+        </div>
+        <h4 style="text-align: center; color: aliceblue;">A Good King Obeys His Queen</h4>
+    </header>
+    <!-- ----------------------------Regular Veg-------------------------------- -->
+    <div style="display: flex; align-items:flex-start; background-color:rgba(152, 251, 152, 0.498);">
+        <br>
+        <div>
+            <img src="../BurgerProject/regualrVegBurger.jpg" id="RegVegImg" alt="" height="240px" width="250px" style="margin: 25px; border: 2px; border-radius: 5%;">
+        </div>
+        <div>
+            <h2 id="RegVeg"> Regular Veg Burger</h2>
+            <h3 id="B1Price">80</h3>
+            <div style="display: flex; align-items: center; gap: 4px;">
+                <label for="C1"><h6>Quantity</h6></label>
+                <button type="button" class="btn btn-danger" id="b1s" onclick="sub(this.id)">-</button><h5 id="C1">0</h5><button type="button" class="btn btn-danger" id="b1a" onclick="add(this.id)">+</button>
+            </div>
+            <br>
+            <!-- ------------Extra Toppings------------ -->
+            <label for="toppings1"><h6>Extra Toppings($7 for each)</h6></label>
+            <select name="toppings1" id="toppings1" style="background-color: lightcoral;">
+                <option value="Select">Select</option>
+                <option value="Cheese">Cheese</option>
+                <option value="Mayonaise">Mayonaise</option>
+                <option value="Ketchup">Ketchup</option>
+                <option value="Onion">Onion</option>
+                <option value="Tomato">Tomato</option>
+                <option value="Lettuce">Lettuce</option>
+            </select>
+            <!-- ------------Extra Toppings------------ -->
+            <button type="button" class="btn btn-danger" id="top1" onclick="addTop(this.id)">add</button>
+            <br><br>
+            <button type="button" class="btn btn-danger" id="b1">Add to Cart</button>
+        </div>
+        <div class="card" style="width: 290px;">
+            <div class="container">
+                <table id="T1" style="width:100%; text-align:center; border-collapse: collapse;">
+                    <tr>
+                        <th>Items</th><th>Price</th><th>Quantity</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    <hr style="color:black">
+    </div>
+    
+    <!-- ----------------------------Chicken Burger-------------------------------- -->
+    <div style="display: flex; align-items:flex-start; background-color:rgba(244, 106, 106, 0.584);">
+        <br>
+        <div>
+            <img src="../BurgerProject/chickenBurger.jpg" id="ChickenImg" alt="" height="220px" width="250px" style="margin: 25px; border: 2px; border-radius: 5%;">
+        </div>
+        <div>
+            <h2 id="ChickenB">Chicken Burger</h2>
+            <h3 id="B2Price">100</h3>
+            <div style="display: flex; align-items: center; gap: 4px;">
+                <label for="C2"><h6>Quantity</h6></label>
+                <button type="button" class="btn btn-danger" id="b2s" onclick="sub(this.id)">-</button><h5 id="C2">0</h5><button type="button" class="btn btn-danger" id="b2a" onclick="add(this.id)">+</button>
+            </div>
+            <br>
+            <!-- ------------Extra Toppings------------ -->
+            <label for="toppings2"><h6>Extra Toppings($7 for each)</h6></label>
+            <select name="toppings2" id="toppings2" style="background-color: lightcoral;">
+                <option value="Select">Select</option>
+                <option value="Cheese">Cheese</option>
+                <option value="Mayonaise">Mayonaise</option>
+                <option value="Ketchup">Ketchup</option>
+                <option value="Onion">Onion</option>
+                <option value="Tomato">Tomato</option>
+                <option value="Lettuce">Lettuce</option>
+            </select>
+            <!-- ------------Extra Toppings------------ -->
+            <button type="button" class="btn btn-danger" id="top2" onclick="addTop(this.id)">add</button>
+            <br><br>
+            <button type="button" class="btn btn-danger" id="b2">Add to Cart</button>
+        </div>
+        <div class="card" style="width: 290px;">
+            <div class="container">
+                <table id="T2" style="width:100%; text-align:center; border-collapse: collapse;">
+                    <tr>
+                        <th>Items</th><th>Price</th><th>Quantity</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------Rajma Burger-------------------------------- -->
+     <div style="display: flex; align-items:flex-start; background-color:rgba(152, 251, 152, 0.498);">
+        <br>
+        <div>
+            <img src="../BurgerProject/Rajma-Burger.jpg" id="RajmaImg" alt="" height="240px" width="250px" style="margin: 25px; border: 2px; border-radius: 5%;">
+        </div>
+        <div>
+            <h2 id="RajmaB"> Rajma Burger</h2>
+            <h3 id="B3Price">95</h3>
+            <div style="display: flex; align-items: center; gap: 4px;">
+                <label for="C3"><h6>Quantity</h6></label>
+                <button type="button" class="btn btn-danger" id="b3s" onclick="sub(this.id)">-</button><h5 id="C3">0</h5><button type="button" class="btn btn-danger" id="b3a" onclick="add(this.id)">+</button>
+            </div>
+            <br>
+            <!-- ------------Extra Toppings------------ -->
+            <label for="toppings3"><h6>Extra Toppings($7 for each)</h6></label>
+            <select name="toppings3" id="toppings3" style="background-color: lightcoral;">
+                <option value="Select">Select</option>
+                <option value="Cheese">Cheese</option>
+                <option value="Mayonaise">Mayonaise</option>
+                <option value="Ketchup">Ketchup</option>
+                <option value="Onion">Onion</option>
+                <option value="Tomato">Tomato</option>
+                <option value="Lettuce">Lettuce</option>
+            </select>
+            <!-- ------------Extra Toppings------------ -->
+            <button type="button" class="btn btn-danger" id="top3" onclick="addTop(this.id)">add</button>
+            <br><br>
+            <button type="button" class="btn btn-danger" id="b3">Add to Cart</button>
+        </div>
+        <div class="card" style="width: 290px;">
+            <div class="container">
+                <table id="T3" style="width:100%; text-align:center; border-collapse: collapse;">
+                    <tr>
+                        <th>Items</th><th>Price</th><th>Quantity</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    <hr style="color:black">
+    </div>
+    <!-- ---------------------------------------FOOTER--------------------------------------------- -->
+    <footer>
+        <div style="margin-top: 10px; background-color: black; height: 100px; text-align: center;">
+            <br>
+            <button type="button" class="btn" style="background-color: deeppink;" onclick="order()">View Order</button>
+        </div>
+    </footer>
+
+
+
+    <script src="./selectBurger.js">   
+    </script>
+</body>
+</html>
